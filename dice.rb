@@ -6,7 +6,7 @@ use(BetterErrors::Middleware)
 BetterErrors.application_root = __dir__
 BetterErrors::Middleware.allow_ip!('0.0.0.0/0.0.0.0')
 
-get("/home") do
+get("/") do
   "<navbar>
   <a href=/dice/2/6>2d6</a>
   <a href=/dice/2/10>2d10</a>
