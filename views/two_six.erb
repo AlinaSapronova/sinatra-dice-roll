@@ -5,15 +5,16 @@
   <title>Dice Roll</title>
 </head>
 <body>
- <navbar>
- <a href="/">Home</a>
-  <a href=/dice/2/6>2d6</a>
-  <a href=/dice/2/10>2d10</a>
-  <a href=/dice/1/20>1d20</a>
-  <a href=/dice/5/4>5d4</a>
-  </navbar>
+
 
 <h1>2d6</h1>
-<p><%= @outcome %></p>
+
+<ul>
+  <%  @rolls.each do |a_roll| %>
+    <li>
+      <%= a_roll %>
+    </li>
+  <% end %>
+</ul>
 </body>
 </html>

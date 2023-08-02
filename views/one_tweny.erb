@@ -6,15 +6,22 @@
 </head>
 <body>
 
- <navbar>
- <a href="/">Home</a>
-  <a href=/dice/2/6>2d6</a>
-  <a href=/dice/2/10>2d10</a>
-  <a href=/dice/1/20>1d20</a>
-  <a href=/dice/5/4>5d4</a>
-  </navbar>
 
 <h1>1d20</h1>
-<p><%= @output %></p>
+<ul>
+  <%  @rolls.each do |a_roll| %>
+    <li>
+      <%= a_roll %>
+<% if a_roll == 1 %>
+  <p style="color: red"><%= @rolls %></p>
+<% elsif a_roll == 20 %>
+  <p style="color: green"><%= @rolls %></p>
+<% else %>
+  <p><%= @output %></p>
+<% end %>
+ </li>
+ <% end %>
+</ul>
+
 </body>
 </html>
